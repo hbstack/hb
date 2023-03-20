@@ -1,0 +1,2 @@
+{{- $images := partialCached "hb/functions/page-images" . . }}
+{{- return $images.GetMatch "feature*" -}}

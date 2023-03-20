@@ -1,0 +1,32 @@
+{{- $pages := slice }}
+{{/* Fetch all regular pages when the given all is true. */}}
+{{- if .all }}
+  {{- $pages = site.AllRegularPages }}
+{{- else }}
+  {{- $pages = site.RegularPages }}
+{{- end }}
+{{/* Filter pages by type, multiple types separated by commas. */}}
+{{- with .type }}
+  {{- $pages = where $pages "Type" "in" (split . ",") }}
+{{- end }}
+{{/* Filter pages by section, multiple sections separated by commas. */}}
+{{- with .section }}
+  {{- $pages = where $pages "Section" "in" (split . ",") }}
+{{- end }}
+{{/* Filter pages by params. */}}
+{{- range $key, $value := . }}
+  {{- if hasPrefix $key "params." }}
+    {{- $pages = where $pages (replace $key "params." ".Params.") $value }}
+  {{- end }}
+{{- end }}
+{{/* Sorting pages by the given sorting, such as Date, Date desc. */}}
+{{- with .sorting }}
+  {{- $sorting := split . " " }}
+  {{- $pages = sort $pages (index $sorting 0) (default "asc" (index $sorting 1)) }}
+{{- end }}
+{{/* Limit the number of pages. */}}
+{{- with .limit }}
+  {{- $pages = first . $pages }}
+{{- end }}
+{{/* Return pages. */}}
+{{- return $pages -}}

@@ -1,0 +1,31 @@
+{{/* JS compile options. */}}
+{{- $params := dict
+  "site" .Site.Params
+}}
+{{- $options := dict
+  "sourceMap" (cond hugo.IsProduction "" "inline")
+  "minify" hugo.IsProduction
+  "params" $params
+  "targetPath" "js/init.js"
+}}
+{{/* Get JS template. */}}
+{{- $js := resources.Get "hb/init/index.tmpl.ts" | resources.ExecuteAsTemplate "hb/init/index.ts" . }}
+{{- if partialCached "hb/functions/debug" . }}
+  {{- warnf "[hb] %s:\n%s\n" $js.Name $js.Content }}
+{{- end }}
+{{/* Compile JS. */}}
+{{- $js = $js | js.Build $options }}
+{{- if hugo.IsProduction }}
+  {{- $js = $js | fingerprint }}
+{{- end }}
+{{/* Precache JS. */}}
+{{- partial "base/partial-if-exists" (dict
+  "Name" "pwa/functions/precache.html"
+  "Context" (dict "Page" . "URL" .RelPermalink)
+  )
+}}
+<script
+  src="{{ $js.RelPermalink }}"
+  {{ if hugo.IsProduction }}
+    integrity="{{ $js.Data.Integrity }}"
+  {{ end }}></script>

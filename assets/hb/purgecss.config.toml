@@ -1,0 +1,16 @@
+classes = [
+    # Required by some components, such as dropdown and offcanvas.
+    "fade",
+    "hide",
+    "show",
+    "showing",
+]
+ids = []
+tags = []
+attributes = [
+    "data-bs-theme",  # Light/Dark color.
+    "data-bs-popper", # Dropdown
+]
+safelist_deep = []
+safelist_greedy = []
+safelist_standard = []

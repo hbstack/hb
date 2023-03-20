@@ -1,0 +1,5 @@
+{{/* Generates cross modules PurgeCSS configurations. */}}
+{{ $tmpl := resources.Get "hb/templates/purgecss.json.html" }}
+{{ $html := $tmpl | resources.ExecuteAsTemplate "/.build/purgecss.json" site.Home }}
+{{/* Publish the file without outputting its link on the page. */}}
+{{ with $html.RelPermalink }}{{ end }}

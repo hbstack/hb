@@ -1,0 +1,15 @@
+{
+  "bracketSameLine": true,
+  "goTemplateBracketSpacing": true,
+  "overrides": [
+    {
+      "files": [
+        "*.html"
+      ],
+      "options": {
+        "parser": "go-template",
+        "bracketSameLine": true
+      }
+    }
+  ]
+}

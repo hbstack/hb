@@ -1,0 +1,21 @@
+{{/* Initialize with empty arrays. */}}
+{{- $data := newScratch -}}
+{{- $data.Add "attributes" slice }}
+{{- $data.Add "classes" slice }}
+{{- $data.Add "ids" slice }}
+{{- $data.Add "safelist_deep" slice }}
+{{- $data.Add "safelist_greedy" slice }}
+{{- $data.Add "safelist_standard" slice }}
+{{- $data.Add "tags" slice }}
+{{- $resources := slice (resources.Get "hb/purgecss.config.toml") }}
+{{- with resources.Match "hb/modules/*/purgecss.config.*" }}
+  {{- $resources = $resources | append . }}
+{{- end }}
+{{/* Merge config from modules. */}}
+{{- range $resources }}
+  {{- $config := .Content | transform.Unmarshal }}
+  {{- range $name, $values := $config }}
+    {{- $data.Add $name $values }}
+  {{- end }}
+{{- end }}
+{{- $data.Values | jsonify -}}
