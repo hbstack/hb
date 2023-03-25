@@ -18,3 +18,4 @@ cacheable = true
 
 [params.hugopress.modules.hb.hooks.body-end]
 cacheable = true
+weight = 1000
