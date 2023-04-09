@@ -4,15 +4,17 @@
   {{- $dirs = $dirs | append "rtl" }}
 {{- end }}
 {{- $page := . }}
+{{- $params := $page.Site.Params }}
 {{- $context := dict
-  "params" $page.Site.Params
+  "params" $params
 }}
+{{- $bundle := default "hb" $params.hb.css_bundle_name }}
 {{- range $dir := $dirs }}
   {{- $rtl := eq $dir "rtl" }}
   {{- $suffix := cond $rtl ".rtl" "" }}
   {{/* SCSS options. */}}
   {{- $options := dict
-    "targetPath" (printf "css/hb%s.css" $suffix)
+    "targetPath" (printf "css/%s%s.css" $bundle $suffix)
     "enableSourceMap" hugo.IsProduction
   }}
   {{- if hugo.IsProduction }}

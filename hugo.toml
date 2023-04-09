@@ -19,3 +19,7 @@ cacheable = true
 [params.hugopress.modules.hb.hooks.body-end]
 cacheable = true
 weight = 1000
+
+[params.hb]
+css_bundle_name = "hb"
+js_bundle_name = "hb"
