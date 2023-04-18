@@ -1,0 +1,9 @@
+{{/* Resize an image resource by the given size. */}}
+{{- $img := .Image }}
+{{- $size := .Size }}
+{{- $invalidTypes := slice "svg" }}
+{{/* ignore invalid image types, such as vector images. */}}
+{{- if not (in $invalidTypes $img.MediaType.SubType) }}
+  {{- $img = $img.Resize $size }}
+{{- end }}
+{{- return $img -}}

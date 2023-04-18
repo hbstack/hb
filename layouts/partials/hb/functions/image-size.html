@@ -1,0 +1,21 @@
+{{/* Returns the height and width of image resources. */}}
+{{- $height := 1 }}
+{{- $width := 1 }}
+{{- if eq .MediaType.SubType "svg" }}
+  {{- $float := `[\d\.]+` }}
+  {{- $delimiter := `[,|\s]` }}
+  {{- $pattern := printf `viewBox="%s%s%s%s(%s)%s(%s)"` $float $delimiter $float $delimiter $float $delimiter $float }}
+  {{- $viewBox := findRESubmatch $pattern .Content 1 }}
+  {{- with index $viewBox 0 }}
+    {{- with index . 1 }}
+        {{- $width = float . }}
+    {{- end }}
+    {{- with index . 2 }}
+        {{- $height = float . }}
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- $height = .Height }}
+  {{- $width = .Width }}
+{{- end }}
+{{- return dict "Height" $height "Width" $width -}}
