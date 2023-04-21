@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html {{ partial "hugopress/document-attributes" . | safeHTMLAttr -}}>
+  <head>
+    {{- partial "hugopress/head-begin" . }}
+    <title>
+      {{- block "title" . -}}{{ partial "base/title" . }}{{- end -}}
+    </title>
+    {{- partial "hugopress/head-end" . }}
+  </head>
+  <body {{ partial "hugopress/body-attributes" . | safeHTMLAttr -}}>
+    {{- partial "hugopress/body-begin" . }}
+    {{ partial "hugopress/functions/render-hooks" (dict "Name" "hb-body-begin" "Page" .) }}
+    {{ partial "hugopress/functions/render-hooks" (dict "Name" "hb-main-begin" "Page" .) }}
+    {{- $attrs := partial "hugopress/functions/render-attributes" (dict "Name" "hb-main" "Page" .) }}
+    <div {{ $attrs | safeHTMLAttr }}>
+      {{- block "main" . }}{{- end }}
+    </div>
+    {{ partial "hugopress/functions/render-hooks" (dict "Name" "hb-main-end" "Page" .) }}
+    {{ partial "hugopress/functions/render-hooks" (dict "Name" "hb-body-end" "Page" .) }}
+    {{- partial "hugopress/body-end" . }}
+  </body>
+</html>
