@@ -1,11 +1,9 @@
-github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20001 h1:xkJJPlzmGxKitnbJHlm7ARK7OJvWsglcM0FbzHS2Neg=
-github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20001/go.mod h1:QKCtI6xnS1xr+zaQyVR8KF4Ec1UvErhvsazehZj/MlI=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20002 h1:6F6sjCSkFIIgqLp4SEIL1Ao9ZfKyM6OmgqEdTlc58Yk=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20002/go.mod h1:Q6TrjM78wB13zkOMBSV4IZIZ54tbshmE2fem9CYx2pU=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
 github.com/hugomods/base v0.1.0 h1:3o9Y85BvXHjkYzZfswM/EtthQ8GOYKN8aXHkIWqu3/8=
 github.com/hugomods/base v0.1.0/go.mod h1:hnWCPbVxuhXBwdFax3mmbMlWKmIo/7OP36MCLOyHtT4=
 github.com/hugomods/hugopress v0.1.0 h1:qktwbSWtbrEz/nX2wBmxDLzzS4o6/rjp7p0GWcOZ+PU=
 github.com/hugomods/hugopress v0.1.0/go.mod h1:CRYvr60xOkZOf4Atkuj+uEj2EH5pjJ39Ws3aJAkoMkA=
-github.com/twbs/bootstrap v5.3.0-alpha2+incompatible h1:1AOkDPZ3DgC7AznxgSVY3hhLPbC9bAB61T3pUSUJvsk=
-github.com/twbs/bootstrap v5.3.0-alpha2+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
+github.com/twbs/bootstrap v5.3.0-alpha3+incompatible h1:+OQzm4u8/Brp5KMcca/ggbw58Uv8yaK26TijAD1tsRE=
 github.com/twbs/bootstrap v5.3.0-alpha3+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
