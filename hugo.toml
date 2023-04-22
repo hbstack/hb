@@ -13,6 +13,8 @@ path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 
 [params.hugopress.modules.hb.attributes.hb-main]
 
+[params.hugopress.modules.hb.attributes.hb-alias-refresh-meta]
+
 [params.hugopress.modules.hb.hooks.head-begin]
 
 [params.hugopress.modules.hb.hooks.head-end]
