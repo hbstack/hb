@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/hbstack/hb/compare/v0.6.0...v0.7.0) (2023-08-25)
+
+
+### Features
+
+* add the hb.styles.hb_top_offset parameter ([#68](https://github.com/hbstack/hb/issues/68)) ([eb242d3](https://github.com/hbstack/hb/commit/eb242d30e4b0a978df9c4e27fd3e28f7d80e086a))
+
 ## [0.6.0](https://github.com/hbstack/hb/compare/v0.5.2...v0.6.0) (2023-08-25)
 
 
