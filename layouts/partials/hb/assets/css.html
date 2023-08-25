@@ -16,6 +16,7 @@
   {{- $options := dict
     "targetPath" (printf "css/%s%s.css" $bundle $suffix)
     "enableSourceMap" hugo.IsProduction
+    "vars" site.Params.hb.styles
   }}
   {{- if hugo.IsProduction }}
     {{- $options = merge $options (dict

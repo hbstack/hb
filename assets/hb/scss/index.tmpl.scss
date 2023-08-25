@@ -8,6 +8,7 @@
   {{- $vars := . | resources.ExecuteAsTemplate . $context }}
   {{- $vars.Content }}
 {{ end }}
+@import "hugo:vars";
 @import "variables";
 @import "../../scss/bootstrap/variables";
 @import "../../scss/bootstrap/variables-dark";

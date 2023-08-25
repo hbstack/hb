@@ -28,3 +28,7 @@ weight = 1000
 css_bundle_name = "hb"
 js_bundle_name = "hb"
 logo = "/images/logo.png"
+
+[params.hb.styles]
+prefix = "hb-" # CSS variables prefix.
+# primary = "#0d6efd" # hex color codes.
