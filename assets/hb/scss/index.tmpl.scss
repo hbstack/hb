@@ -14,10 +14,12 @@
 @import "../../scss/bootstrap/variables-dark";
 
 @import "../../scss/bootstrap/maps";
+@import "mixins";
 @import "../../scss/bootstrap/mixins";
 @import "../../scss/bootstrap/utilities";
 
 // Layout & components
+@import "root";
 @import "../../scss/bootstrap/root";
 @import "../../scss/bootstrap/reboot";
 @import "../../scss/bootstrap/type";
@@ -55,6 +57,7 @@
 
 // Utilities
 @import "../../scss/bootstrap/utilities/api";
+@import "utilities";
 
 // Modules
 {{- range resources.Match "hb/modules/*/scss/index.scss" }}
