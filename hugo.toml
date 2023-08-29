@@ -32,4 +32,4 @@ logo = "/images/logo.png"
 [params.hb.styles]
 prefix = "hb-" # CSS variables prefix.
 # primary = "#0d6efd" # hex color codes.
-hb_top_offset = "24px" # the default top offset, in pixels.
+hb_top_offset = "24px" # the default top offset, in pixels, for internal use.

@@ -4,11 +4,11 @@
 @import "../../scss/bootstrap/functions";
 
 // Variables
+@import "hugo:vars";
 {{ range resources.Match "hb/modules/*/scss/variables.tmpl.scss" }}
   {{- $vars := . | resources.ExecuteAsTemplate . $context }}
   {{- $vars.Content }}
 {{ end }}
-@import "hugo:vars";
 @import "variables";
 @import "../../scss/bootstrap/variables";
 @import "../../scss/bootstrap/variables-dark";
