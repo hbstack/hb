@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/hbstack/hb/compare/v0.7.0...v0.7.1) (2023-08-29)
+
+
+### Bug Fixes
+
+* allow overriding Sass vars from modules ([0bfc09e](https://github.com/hbstack/hb/commit/0bfc09e43806867b58a83505fdfd85c9067aa94e))
+
 ## [0.7.0](https://github.com/hbstack/hb/compare/v0.6.0...v0.7.0) (2023-08-25)
 
 
