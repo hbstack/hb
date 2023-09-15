@@ -1,5 +1,6 @@
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003 h1:pt/JGVD5YYRsVVijOHPZI6YKTUvbR4e0hgV9B0S6rbI=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003/go.mod h1:mvM05r93HiefwoaxQTaYiJxtJAhTebwQtU1Xh/J+Okk=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200/go.mod h1:kx8MBj9T7SFR8ZClWvKZPmmUxBaltkoXvnWlZZcSnYA=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
 github.com/hugomods/base v0.1.0 h1:3o9Y85BvXHjkYzZfswM/EtthQ8GOYKN8aXHkIWqu3/8=
 github.com/hugomods/base v0.1.0/go.mod h1:hnWCPbVxuhXBwdFax3mmbMlWKmIo/7OP36MCLOyHtT4=
