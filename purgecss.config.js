@@ -9,7 +9,27 @@ fs.access(stats, fs.F_OK, (err) => {
 
 let config = {};
 try {
-    let rawConfig = fs.readFileSync(path.join(process.env.HUGO_PUBLISHDIR, '.build/purgecss.json'))
+    let filename = path.join(process.env.HUGO_PUBLISHDIR, ".build", "purgecss.json")
+    let found = true
+    if (!fs.existsSync(filename)) {
+        found = false
+        const files = fs.readdirSync(process.env.HUGO_PUBLISHDIR)
+        for (file of files) {
+            const fp = path.join(process.env.HUGO_PUBLISHDIR, file)
+            const stats = fs.statSync(fp)
+            if (stats.isDirectory()) {
+                filename = path.join(fp, ".build", "purgecss.json")
+                if (fs.existsSync(filename)) {
+                    found = true
+                    break
+                }
+            }
+        }
+    }
+    if (found === false) {
+        throw new Error('No PurgeCSS configuration found.')
+    }
+    let rawConfig = fs.readFileSync(filename)
     config = JSON.parse(rawConfig)
 } catch (err) {
     throw new Error(`Failed to parse runtime PurgeCSS config.\nPlease enable the "--renderToDisk" if you are using Hugo server.\n${err}`)
