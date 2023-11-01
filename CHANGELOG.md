@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.7.2](https://github.com/hbstack/hb/compare/v0.7.1...v0.7.2) (2023-11-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency stylelint-scss to v5.2.0 ([b0a651b](https://github.com/hbstack/hb/commit/b0a651b1f6e37013bd226f512f0008ef3e09b04d))
+* **deps:** update dependency stylelint-scss to v5.2.1 ([6641368](https://github.com/hbstack/hb/commit/6641368ba69acf8edb6f922529ef1115b6e6b73a))
+* **deps:** update dependency stylelint-scss to v5.3.0 ([c397431](https://github.com/hbstack/hb/commit/c39743112412d7622c9a0e2a2d3e7450beb1411c))
+* **purgecss:** try to find the configuration file in subdirectories ([#108](https://github.com/hbstack/hb/issues/108)) ([1d7ddd3](https://github.com/hbstack/hb/commit/1d7ddd30f31240f6ab55b5fd6d8e2d08cacc194b)), closes [#106](https://github.com/hbstack/hb/issues/106)
+* **purgecss:** use process.env.HUGO_PUBLISHDIR instead of hard-coded public folder ([#107](https://github.com/hbstack/hb/issues/107)) ([c599450](https://github.com/hbstack/hb/commit/c599450f3fb9cd826d57eb1e4ad2c336168dc298)), closes [#105](https://github.com/hbstack/hb/issues/105)
+
 ## [0.7.1](https://github.com/hbstack/hb/compare/v0.7.0...v0.7.1) (2023-08-29)
 
 
