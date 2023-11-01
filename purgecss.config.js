@@ -1,4 +1,5 @@
 const stats = './hugo_stats.json'
+const path = require('path')
 const fs = require('fs')
 fs.access(stats, fs.F_OK, (err) => {
     if (err) {
@@ -8,7 +9,7 @@ fs.access(stats, fs.F_OK, (err) => {
 
 let config = {};
 try {
-    let rawConfig = fs.readFileSync('./public/.build/purgecss.json')
+    let rawConfig = fs.readFileSync(path.join(process.env.HUGO_PUBLISHDIR, '.build/purgecss.json'))
     config = JSON.parse(rawConfig)
 } catch (err) {
     throw new Error(`Failed to parse runtime PurgeCSS config.\nPlease enable the "--renderToDisk" if you are using Hugo server.\n${err}`)
