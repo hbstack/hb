@@ -8,3 +8,9 @@
 [![Lint](https://github.com/hbstack/hb/actions/workflows/lint.yml/badge.svg?style=flat-square)](https://github.com/hbstack/hb/actions/workflows/lint.yml)
 
 HB is a Hugo theme framework that built on top of [Hugo](https://gohugo.io) and [Bootstrap v5.3.0+](https://getbootstrap.com).
+
+## Backers
+
+| Name | Name | Name |
+| :--: | :--: | :--: |
+| [Wilson E. Alvarez](https://github.com/Rubonne) | [Luigi](https://github.com/luigi8bits) | [Elio Gavlinski](https://github.com/gavlinski) |
