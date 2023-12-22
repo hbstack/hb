@@ -1,3 +1,7 @@
+{{- $fullWidth := default (default false site.Params.hb.full_width) .Page.Params.full_width }}
+{{- if reflect.IsSlice $fullWidth }}
+  {{- $fullWidth = in $fullWidth .Page.Section }}
+{{- end }}
 {{- return dict
-  "class" "hb-main container"
+  "class" (cond $fullWidth "hb-main container-fluid" "hb-main container")
 }}
