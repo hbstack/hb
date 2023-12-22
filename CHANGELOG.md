@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0](https://github.com/hbstack/hb/compare/v0.7.2...v0.8.0) (2023-12-22)
+
+
+### Features
+
+* add the hb.full_width parameter and page's full_width parameter ([#137](https://github.com/hbstack/hb/issues/137)) ([7c4cc7c](https://github.com/hbstack/hb/commit/7c4cc7cf5b6e33c66c82dabab9e235de4aa815b7))
+
+
+### Bug Fixes
+
+* **deps:** update dependency stylelint-scss to v5.3.1 ([86dc36d](https://github.com/hbstack/hb/commit/86dc36dacd527d9587f137b78a90e363b5d5a75b))
+* **deps:** update dependency stylelint-scss to v6 ([04b8249](https://github.com/hbstack/hb/commit/04b824938cc48b2c73faaad0186ae4963c84e88b))
+
 ## [0.7.2](https://github.com/hbstack/hb/compare/v0.7.1...v0.7.2) (2023-11-01)
 
 
