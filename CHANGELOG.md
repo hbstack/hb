@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/hbstack/hb/compare/v0.8.0...v0.8.1) (2023-12-24)
+
+
+### Bug Fixes
+
+* allow specifying default full width for specified page types ([#138](https://github.com/hbstack/hb/issues/138)) ([0fcc5bc](https://github.com/hbstack/hb/commit/0fcc5bc339486d29509d0146b59083fca0826135))
+
 ## [0.8.0](https://github.com/hbstack/hb/compare/v0.7.2...v0.8.0) (2023-12-22)
 
 
