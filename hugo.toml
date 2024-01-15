@@ -11,6 +11,9 @@ path = "github.com/hugomods/base"
 [[module.imports]]
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 
+[params.hugopress.modules.hb.attributes.document]
+cacheable = true
+
 [params.hugopress.modules.hb.attributes.hb-main]
 
 [params.hugopress.modules.hb.attributes.hb-alias-refresh-meta]
@@ -28,6 +31,7 @@ weight = 1000
 css_bundle_name = "hb"
 js_bundle_name = "hb"
 logo = "/images/logo.png"
+color = "light" # default color mode, light or dark.
 
 [params.hb.styles]
 prefix = "hb-" # CSS variables prefix.
