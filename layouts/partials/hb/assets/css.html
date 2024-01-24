@@ -1,6 +1,6 @@
 {{- $dirs := slice "" }}
 {{/* Check if there is RTL site. */}}
-{{- if where site.Home.Sites "Language.LanguageDirection" "rtl" }}
+{{- if where site.Sites "Language.LanguageDirection" "rtl" }}
   {{- $dirs = $dirs | append "rtl" }}
 {{- end }}
 {{- $page := . }}
