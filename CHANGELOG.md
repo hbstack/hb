@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.1](https://github.com/hbstack/hb/compare/v0.9.0...v0.9.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* avoid runtime error ([#159](https://github.com/hbstack/hb/issues/159)) ([f818087](https://github.com/hbstack/hb/commit/f818087bb63416cc45eb7da856cc49b82e2c4cc8))
+* **deps:** update dependency stylelint-scss to v6.1.0 ([8397f01](https://github.com/hbstack/hb/commit/8397f010a5fa0475f7bf31f895b93744f2286224))
+
 ## [0.9.0](https://github.com/hbstack/hb/compare/v0.8.1...v0.9.0) (2024-01-15)
 
 
