@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2](https://github.com/hbstack/hb/compare/v0.9.1...v0.9.2) (2024-01-25)
+
+
+### Continuous Integration
+
+* add the hb/assets/css-resource partial ([#160](https://github.com/hbstack/hb/issues/160)) ([eed7546](https://github.com/hbstack/hb/commit/eed75468180c72df0906758808206944a51b432b))
+
 ## [0.9.1](https://github.com/hbstack/hb/compare/v0.9.0...v0.9.1) (2024-01-24)
 
 
