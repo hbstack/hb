@@ -1,0 +1,53 @@
+{{- $dirs := slice "" }}
+{{/* Check if there is RTL site. */}}
+{{- if where site.Sites "Language.LanguageDirection" "rtl" }}
+  {{- $dirs = $dirs | append "rtl" }}
+{{- end }}
+{{- $page := . }}
+{{- $params := $page.Site.Params }}
+{{- $context := dict
+  "params" $params
+}}
+{{- $res := false }}
+{{- $bundle := default "hb" $params.hb.css_bundle_name }}
+{{- range $dir := $dirs }}
+  {{- $rtl := eq $dir "rtl" }}
+  {{- $suffix := cond $rtl ".rtl" "" }}
+  {{/* SCSS options. */}}
+  {{- $options := dict
+    "targetPath" (printf "css/%s%s.css" $bundle $suffix)
+    "enableSourceMap" hugo.IsProduction
+    "vars" site.Params.hb.styles
+  }}
+  {{- if hugo.IsProduction }}
+    {{- $options = merge $options (dict
+      "outputStyle" "compressed")
+    }}
+  {{- end }}
+  {{/* Load style template. */}}
+  {{- $tmpl := resources.Get "hb/scss/index.tmpl.scss" }}
+  {{/* Compile SCSS. The target path MUST begin with "hb/scss/*" for resolving SASS/SCSS modules. */}}
+  {{- $style := $tmpl | resources.ExecuteAsTemplate (printf "hb/scss/index%s.scss" $suffix) $context }}
+  {{- if partialCached "hb/functions/debug" . }}
+    {{- warnf "[hb] %s:\n%s\n" $style.Name $style.Content }}
+  {{- end }}
+  {{- $style = $style | toCSS $options }}
+  {{- $postCSSOpts := dict
+    "use" (cond $rtl "rtlcss" "")
+  }}
+  {{- $style = $style | resources.PostCSS $postCSSOpts }}
+  {{- if hugo.IsProduction }}
+    {{- $style = $style | fingerprint | resources.PostProcess }}
+  {{- end -}}
+  {{/* Precache both of LTR and RTL CSS bundles. */}}
+  {{- partial "base/partial-if-exists" (dict
+    "Name" "pwa/functions/precache.html"
+    "Context" (dict "Page" $page "URL" $style.RelPermalink)
+    )
+  }}
+  {{- if eq $dir $page.Site.Language.LanguageDirection }}
+    {{- $res = $style }}
+    {{- break }}
+  {{- end }}
+{{- end }}
+{{- return $res }}
