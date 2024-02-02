@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/hbstack/hb/compare/v0.9.2...v0.10.0) (2024-02-02)
+
+
+### Features ✨
+
+* override the _funcs/get-page-images partial to return the name of image and allow using site image resources ([#164](https://github.com/hbstack/hb/issues/164)) ([e5dc9cf](https://github.com/hbstack/hb/commit/e5dc9cf896b0b3880a39ef2aa5fa90371355311c))
+
 ## [0.9.2](https://github.com/hbstack/hb/compare/v0.9.1...v0.9.2) (2024-01-25)
 
 
