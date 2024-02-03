@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/hbstack/hb/compare/v0.10.0...v0.11.0) (2024-02-03)
+
+
+### Features ✨
+
+* add the module-exists function ([#166](https://github.com/hbstack/hb/issues/166)) ([07c929b](https://github.com/hbstack/hb/commit/07c929b1db6fab0b37737bcbfb9c1dabbe21342b))
+
 ## [0.10.0](https://github.com/hbstack/hb/compare/v0.9.2...v0.10.0) (2024-02-02)
 
 
