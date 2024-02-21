@@ -61,5 +61,5 @@
 
 // Modules
 {{- range resources.Match "hb/modules/*/scss/index.scss" }}
-@import "{{ replace . "hb/modules" "../modules" }}";
+@import "{{ replace .Name "hb/modules" "../modules" | strings.TrimPrefix `/` }}";
 {{- end }}
