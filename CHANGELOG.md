@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/hbstack/hb/compare/v0.11.0...v0.11.1) (2024-02-21)
+
+
+### Bug Fixes 🐞
+
+* remove the leading slash from module SCSS path ([#173](https://github.com/hbstack/hb/issues/173)) ([5c58d40](https://github.com/hbstack/hb/commit/5c58d40a8b69f711b20fc8ffa30e11ac28af4f4e))
+
 ## [0.11.0](https://github.com/hbstack/hb/compare/v0.10.0...v0.11.0) (2024-02-03)
 
 
