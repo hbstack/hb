@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.2](https://github.com/hbstack/hb/compare/v0.11.1...v0.11.2) (2024-02-23)
+
+
+### Bug Fixes 🐞
+
+* rename purgecss.config.js to assets/hb/purgecss.config.js, to be vendorable ([#176](https://github.com/hbstack/hb/issues/176)) ([ba62ad2](https://github.com/hbstack/hb/commit/ba62ad2da403e665aad27872138d9112d9b028d4))
+
 ## [0.11.1](https://github.com/hbstack/hb/compare/v0.11.0...v0.11.1) (2024-02-21)
 
 
