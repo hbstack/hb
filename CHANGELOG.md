@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/hbstack/hb/compare/v0.11.2...v0.12.0) (2024-02-27)
+
+
+### Features ✨
+
+* add the data-layout and data-section attributes for hb-main element for styling purpose ([#180](https://github.com/hbstack/hb/issues/180)) ([6c8b086](https://github.com/hbstack/hb/commit/6c8b0864482ad5e993163d739a67da4f8a08afc2))
+
 ## [0.11.2](https://github.com/hbstack/hb/compare/v0.11.1...v0.11.2) (2024-02-23)
 
 
