@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.1](https://github.com/hbstack/hb/compare/v0.12.0...v0.12.1) (2024-03-04)
+
+
+### Bug Fixes 🐞
+
+* **deps:** update dependency stylelint-scss to v6.2.0 ([90e7557](https://github.com/hbstack/hb/commit/90e75576a7c516fcf6fdbf562839fc9d23be394b))
+* move data-layout and data-section attributes from .hb-main to &lt;body&gt; element ([#184](https://github.com/hbstack/hb/issues/184)) ([f5a2ba5](https://github.com/hbstack/hb/commit/f5a2ba5f04c7b82d63ef986768340b64c2fa805b))
+
 ## [0.12.0](https://github.com/hbstack/hb/compare/v0.11.2...v0.12.0) (2024-02-27)
 
 
