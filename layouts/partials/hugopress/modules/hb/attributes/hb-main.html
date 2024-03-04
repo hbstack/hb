@@ -9,10 +9,4 @@
   {{- end }}
 {{- end }}
 {{- $attrs.Set "class" (cond $fullWidth "hb-main container-fluid" "hb-main container") }}
-{{- with .Page.Layout }}
-  {{- $attrs.Set "data-layout" . }}
-{{- end }}
-{{- with .Page.Section }}
-  {{- $attrs.Set "data-section" . }}
-{{- end }}
 {{- return $attrs.Values }}
