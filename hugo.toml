@@ -14,6 +14,8 @@ path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 [params.hugopress.modules.hb.attributes.document]
 cacheable = true
 
+[params.hugopress.modules.hb.attributes.body]
+
 [params.hugopress.modules.hb.attributes.hb-main]
 
 [params.hugopress.modules.hb.attributes.hb-alias-refresh-meta]

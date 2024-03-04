@@ -1,0 +1,8 @@
+{{- $attrs := newScratch }}
+{{- with .Page.Layout }}
+  {{- $attrs.Set "data-layout" . }}
+{{- end }}
+{{- with .Page.Section }}
+  {{- $attrs.Set "data-section" . }}
+{{- end }}
+{{- return $attrs.Values }}
