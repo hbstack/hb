@@ -45,8 +45,8 @@
     "Context" (dict "Page" $page "URL" $style.RelPermalink)
     )
   }}
+  {{- $res = $style }}
   {{- if eq $dir $page.Site.Language.LanguageDirection }}
-    {{- $res = $style }}
     {{- break }}
   {{- end }}
 {{- end }}
