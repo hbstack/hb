@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.2](https://github.com/hbstack/hb/compare/v0.12.1...v0.12.2) (2024-03-12)
+
+
+### Bug Fixes 🐞
+
+* **deps:** update dependency stylelint-scss to v6.2.1 ([c56fc57](https://github.com/hbstack/hb/commit/c56fc57793c78d314229a0f945783954c9ccad2b))
+* hb/assets/css-resource returns false sometime on local development ([#192](https://github.com/hbstack/hb/issues/192)) ([32dd685](https://github.com/hbstack/hb/commit/32dd685874399935c2fc5762883df3ef569f8a0e))
+
 ## [0.12.1](https://github.com/hbstack/hb/compare/v0.12.0...v0.12.1) (2024-03-04)
 
 
