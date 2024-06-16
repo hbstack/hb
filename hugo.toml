@@ -21,6 +21,7 @@ cacheable = true
 [params.hugopress.modules.hb.attributes.hb-alias-refresh-meta]
 
 [params.hugopress.modules.hb.hooks.head-begin]
+cacheable = true
 
 [params.hugopress.modules.hb.hooks.head-end]
 cacheable = true
