@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.3](https://github.com/hbstack/hb/compare/v0.12.2...v0.12.3) (2024-06-16)
+
+
+### Performance Improvements ⚡️
+
+* cache head-begin hook ([c644fbc](https://github.com/hbstack/hb/commit/c644fbca4e9ff9acb92f9a2c10ac95704ba54e76))
+
 ## [0.12.2](https://github.com/hbstack/hb/compare/v0.12.1...v0.12.2) (2024-03-12)
 
 
