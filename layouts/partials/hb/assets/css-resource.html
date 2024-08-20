@@ -35,7 +35,7 @@
   {{- $postCSSOpts := dict
     "use" (cond $rtl "rtlcss" "")
   }}
-  {{- $style = $style | resources.PostCSS $postCSSOpts }}
+  {{- $style = $style | css.PostCSS $postCSSOpts }}
   {{- if hugo.IsProduction }}
     {{- $style = $style | fingerprint | resources.PostProcess }}
   {{- end -}}
