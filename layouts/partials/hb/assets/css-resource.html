@@ -15,6 +15,7 @@
   {{- $suffix := cond $rtl ".rtl" "" }}
   {{/* SCSS options. */}}
   {{- $options := dict
+    "transpiler" (default "dartsass" $params.hb.sass_transpiler)
     "targetPath" (printf "css/%s%s.css" $bundle $suffix)
     "enableSourceMap" hugo.IsProduction
     "vars" site.Params.hb.styles
