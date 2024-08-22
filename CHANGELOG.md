@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.0](https://github.com/hbstack/hb/compare/v0.12.4...v0.13.0) (2024-08-22)
+
+
+### Features ✨
+
+* add the hb.sass_transpiler parameter, default to dartsass ([#228](https://github.com/hbstack/hb/issues/228)) ([166c5ed](https://github.com/hbstack/hb/commit/166c5edc62039b4163a6ebc3edbb1e715b8b1e41)), closes [#227](https://github.com/hbstack/hb/issues/227)
+
 ## [0.12.4](https://github.com/hbstack/hb/compare/v0.12.3...v0.12.4) (2024-08-20)
 
 
