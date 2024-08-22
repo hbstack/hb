@@ -35,6 +35,7 @@ css_bundle_name = "hb"
 js_bundle_name = "hb"
 logo = "/images/logo.png"
 color = "light" # default color mode, light or dark.
+sass_transpiler = "dartsass" # dartsass or libsass (deprecated).
 
 [params.hb.styles]
 prefix = "hb-" # CSS variables prefix.
