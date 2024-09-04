@@ -1,0 +1,90 @@
+{{- $params := site.Params.hb.tables }}
+{{- $class := "table" }}
+{{- $theadClass := slice }}
+{{- $tbodyClass := slice }}
+{{- $borderless := default false .Attributes._borderless }}
+{{- $borderStyle := default $params.border_style .Attributes._border_style }}
+{{- if $borderless }}
+  {{- $class = printf "%s table-borderless" $class }}
+{{- else }}
+  {{- if default $params.bordered .Attributes._bordered }}
+    {{- $class = printf "%s table-bordered" $class }}
+  {{- end }}
+  {{- with $borderStyle }}
+    {{- $class = printf "%s border-%s" $class . }}
+  {{- end }}
+{{- end }}
+{{- with default $params.align .Attributes._align }}
+  {{- $class = printf "%s align-%s" $class . }}
+{{- end }}
+{{- if default $params.hover .Attributes._hover }}
+  {{- $class = printf "%s table-hover" $class }}
+{{- end }}
+{{- if default $params.striped .Attributes._striped }}
+  {{- $class = printf "%s table-striped" $class }}
+{{- end }}
+{{- if default $params.striped_columns .Attributes._striped_columns }}
+  {{- $class = printf "%s table-striped-columns" $class }}
+{{- end }}
+{{- with .Attributes._size }}
+  {{- $class = printf "%s table-%s" $class . }}
+{{- end }}
+{{- with default $params.style .Attributes._style }}
+  {{- $class = printf "%s table-%s" $class . }}
+{{- end }}
+{{- with default $params.thead_style .Attributes._thead_style }}
+  {{- $theadClass = $theadClass | append (printf "table-%s" .) }}
+{{- end }}
+{{- if default $params.group_divider .Attributes._group_divider }}
+  {{- $tbodyClass = $tbodyClass | append "table-group-divider" }}
+  {{- with $borderStyle }}
+    {{- $tbodyClass = $tbodyClass | append (printf "border-%s" .) }}
+  {{- end }}
+{{- end }}
+{{- $alignmentClasses := dict
+  "center" "text-center"
+  "left" "text-start"
+  "right" "text-end"
+}}
+<div class="table-responsive">
+  <table class="{{ $class }}"
+    {{- range $k, $v := .Attributes }}
+      {{- if hasPrefix $k "_" }}
+        {{- continue }}
+      {{- else if eq $k "class" }}
+        {{- $class = printf "%s %s" $class $v }}
+      {{- else if $v }}
+        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+      {{- end }}
+    {{- end }}>
+    {{- with .Attributes._caption }}
+      <caption>{{ . }}</caption>
+    {{- end }}
+    <thead
+      {{ with $theadClass }}class="{{ delimit . ` ` }}"{{ end }}>
+      {{- range .THead }}
+        <tr>
+          {{- range . }}
+            <th
+              {{ with index $alignmentClasses .Alignment }}class="{{ . }}"{{ end }}>
+              {{- .Text -}}
+            </th>
+          {{- end }}
+        </tr>
+      {{- end }}
+    </thead>
+    <tbody
+      {{ with $tbodyClass }}class="{{ delimit . ` ` }}"{{ end }}>
+      {{- range .TBody }}
+        <tr>
+          {{- range . }}
+            <td
+              {{ with index $alignmentClasses .Alignment }}class="{{ . }}"{{ end }}>
+              {{- .Text -}}
+            </td>
+          {{- end }}
+        </tr>
+      {{- end }}
+    </tbody>
+  </table>
+</div>
