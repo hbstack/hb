@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.1](https://github.com/hbstack/hb/compare/v0.15.0...v0.15.1) (2024-09-05)
+
+
+### Bug Fixes 🐞
+
+* **tables:** rename _header attribute to _thead for consistent naming convention ([c866a92](https://github.com/hbstack/hb/commit/c866a92d127a3fa98c722f7b742a9cc2a018246f))
+
 ## [0.15.0](https://github.com/hbstack/hb/compare/v0.14.0...v0.15.0) (2024-09-05)
 
 
