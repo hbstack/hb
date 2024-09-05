@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.14.0](https://github.com/hbstack/hb/compare/v0.13.0...v0.14.0) (2024-09-05)
+
+
+### Features ✨
+
+* add blockquote render hook ([5e67dcb](https://github.com/hbstack/hb/commit/5e67dcb7ff846ea04679cf737caeb8e14edc04cd))
+* add blockquotes parameters ([#237](https://github.com/hbstack/hb/issues/237)) ([5e67dcb](https://github.com/hbstack/hb/commit/5e67dcb7ff846ea04679cf737caeb8e14edc04cd))
+* add hb.tables parameters ([#236](https://github.com/hbstack/hb/issues/236)) ([a391f95](https://github.com/hbstack/hb/commit/a391f952329239389937ac02a3f25cb36cfc8e5a))
+* add table render hook ([a391f95](https://github.com/hbstack/hb/commit/a391f952329239389937ac02a3f25cb36cfc8e5a))
+
+
+### Bug Fixes 🐞
+
+* clean up unused Sass variables ([6823fbb](https://github.com/hbstack/hb/commit/6823fbbbcec92f0879f05b54e02a7d566f3f2280))
+* **deps:** update dependency stylelint-scss to v6.5.1 ([dcb1f81](https://github.com/hbstack/hb/commit/dcb1f81ac1adbf6a2aaa0a3fca19945c646469c6))
+
 ## [0.13.0](https://github.com/hbstack/hb/compare/v0.12.4...v0.13.0) (2024-08-22)
 
 
