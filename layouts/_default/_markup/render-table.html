@@ -60,7 +60,7 @@
     {{- with .Attributes._caption }}
       <caption>{{ . }}</caption>
     {{- end }}
-    {{- if default true .Attributes._header }}
+    {{- if default true .Attributes._thead }}
       <thead
         {{ with $theadClass }}class="{{ delimit . ` ` }}"{{ end }}>
         {{- range .THead }}
