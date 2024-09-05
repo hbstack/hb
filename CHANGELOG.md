@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/hbstack/hb/compare/v0.14.0...v0.15.0) (2024-09-05)
+
+
+### Features ✨
+
+* **tables:** add the _header attribute for tables, hide the header if `false` ([#238](https://github.com/hbstack/hb/issues/238)) ([eb56400](https://github.com/hbstack/hb/commit/eb56400a29c8e56120f5b60ee13ad09ec23931dc))
+
 ## [0.14.0](https://github.com/hbstack/hb/compare/v0.13.0...v0.14.0) (2024-09-05)
 
 
