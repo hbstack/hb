@@ -60,19 +60,21 @@
     {{- with .Attributes._caption }}
       <caption>{{ . }}</caption>
     {{- end }}
-    <thead
-      {{ with $theadClass }}class="{{ delimit . ` ` }}"{{ end }}>
-      {{- range .THead }}
-        <tr>
-          {{- range . }}
-            <th
-              {{ with index $alignmentClasses .Alignment }}class="{{ . }}"{{ end }}>
-              {{- .Text -}}
-            </th>
-          {{- end }}
-        </tr>
-      {{- end }}
-    </thead>
+    {{- if default true .Attributes._header }}
+      <thead
+        {{ with $theadClass }}class="{{ delimit . ` ` }}"{{ end }}>
+        {{- range .THead }}
+          <tr>
+            {{- range . }}
+              <th
+                {{ with index $alignmentClasses .Alignment }}class="{{ . }}"{{ end }}>
+                {{- .Text -}}
+              </th>
+            {{- end }}
+          </tr>
+        {{- end }}
+      </thead>
+    {{- end }}
     <tbody
       {{ with $tbodyClass }}class="{{ delimit . ` ` }}"{{ end }}>
       {{- range .TBody }}
