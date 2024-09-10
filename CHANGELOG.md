@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.2](https://github.com/hbstack/hb/compare/v0.15.1...v0.15.2) (2024-09-10)
+
+
+### Bug Fixes 🐞
+
+* allow specifying extra class name for blockquotes and tables ([#245](https://github.com/hbstack/hb/issues/245)) ([b1e818d](https://github.com/hbstack/hb/commit/b1e818d46fd8ed2ad621fb6acf45ab6c1b784378))
+
 ## [0.15.1](https://github.com/hbstack/hb/compare/v0.15.0...v0.15.1) (2024-09-05)
 
 
