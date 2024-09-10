@@ -46,13 +46,14 @@
   "left" "text-start"
   "right" "text-end"
 }}
+{{- with .Attributes.class }}
+  {{- $class = printf "%s %s" $class . }}
+{{- end }}
 <div class="table-responsive">
   <table class="{{ $class }}"
     {{- range $k, $v := .Attributes }}
-      {{- if hasPrefix $k "_" }}
+      {{- if or (hasPrefix $k "_") (eq $k "class") }}
         {{- continue }}
-      {{- else if eq $k "class" }}
-        {{- $class = printf "%s %s" $class $v }}
       {{- else if $v }}
         {{- printf " %s=%q" $k $v | safeHTMLAttr }}
       {{- end }}
