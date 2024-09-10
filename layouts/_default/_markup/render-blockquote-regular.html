@@ -16,7 +16,9 @@
 {{- if or (isset .Attributes "align") (isset .Attributes "caption") }}
   <figure
     class="{{ $borderClass }}{{ with .Attributes.align }} text-{{ . }}{{ end }}">
-    <blockquote {{ with .Attributes.id }}id="{{ . }}" {{ end }}class="{{ delimit $class ` ` }} mb-0">
+    <blockquote
+      {{ with .Attributes.id }}id="{{ . }}"{{ end }}
+      class="{{ delimit $class ` ` }} mb-0">
       {{ .Text }}
     </blockquote>
     {{- with .Attributes.caption }}
@@ -29,7 +31,9 @@
     {{- end }}
   </figure>
 {{- else }}
-  <blockquote {{ with .Attributes.id }}id="{{ . }}" {{ end }}class="{{ delimit $class ` ` }} {{ $borderClass }}">
+  <blockquote
+    {{ with .Attributes.id }}id="{{ . }}"{{ end }}
+    class="{{ delimit $class ` ` }} {{ $borderClass }}">
     {{ .Text }}
   </blockquote>
 {{- end }}
