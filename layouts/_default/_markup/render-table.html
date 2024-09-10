@@ -50,7 +50,7 @@
   {{- $class = printf "%s %s" $class . }}
 {{- end }}
 <div class="table-responsive">
-  <table {{ with .Attributes.id }}id="{{ . }}" {{ end }}class="{{ $class }}"
+  <table class="{{ $class }}"
     {{- range $k, $v := .Attributes }}
       {{- if or (hasPrefix $k "_") (eq $k "class") }}
         {{- continue }}
