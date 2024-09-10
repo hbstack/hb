@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.3](https://github.com/hbstack/hb/compare/v0.15.2...v0.15.3) (2024-09-10)
+
+
+### Bug Fixes 🐞
+
+* allow specifying id attribute for blockquotes ([#247](https://github.com/hbstack/hb/issues/247)) ([29fd6b1](https://github.com/hbstack/hb/commit/29fd6b148c60bf8ba9cab2f1018aaab7af2be6c3))
+
 ## [0.15.2](https://github.com/hbstack/hb/compare/v0.15.1...v0.15.2) (2024-09-10)
 
 
