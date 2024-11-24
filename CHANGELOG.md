@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.15.4](https://github.com/hbstack/hb/compare/v0.15.3...v0.15.4) (2024-11-24)
+
+
+### Bug Fixes 🐞
+
+* compatible with the changes of @fullhuman/postcss-purgecss v7.0.0 ([#279](https://github.com/hbstack/hb/issues/279)) ([56511db](https://github.com/hbstack/hb/commit/56511dbb05d4a112353ffaba41f9fe466eb882bc))
+* **deps:** update dependency stylelint-scss to v6.10.0 ([1884872](https://github.com/hbstack/hb/commit/1884872695ff630bf36891b48fbff4f45111976a))
+* **deps:** update dependency stylelint-scss to v6.6.0 ([5ee97ca](https://github.com/hbstack/hb/commit/5ee97ca620d5580ba7e0f2387e1bc08afc7a7a3b))
+* **deps:** update dependency stylelint-scss to v6.7.0 ([59a5937](https://github.com/hbstack/hb/commit/59a5937326eedb18e0906a55fd073547c079dced))
+* **deps:** update dependency stylelint-scss to v6.8.0 ([d6d37e9](https://github.com/hbstack/hb/commit/d6d37e96ae021b92ffb6318c2295e883f31975aa))
+* **deps:** update dependency stylelint-scss to v6.8.1 ([8fbde1b](https://github.com/hbstack/hb/commit/8fbde1bbac5ef3d516f3159d936214d204c86734))
+* **deps:** update dependency stylelint-scss to v6.9.0 ([e46ed5e](https://github.com/hbstack/hb/commit/e46ed5ef6600d6497517597b17e836824b045407))
+
 ## [0.15.3](https://github.com/hbstack/hb/compare/v0.15.2...v0.15.3) (2024-09-10)
 
 
