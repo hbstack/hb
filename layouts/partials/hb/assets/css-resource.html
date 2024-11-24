@@ -1,3 +1,4 @@
+{{- $debug := partialCached "hb/functions/debug" . }}
 {{- $dirs := slice "" }}
 {{/* Check if there is RTL site. */}}
 {{- if where site.Sites "Language.LanguageDirection" "rtl" }}
@@ -16,6 +17,12 @@
   {{/* SCSS options. */}}
   {{- $options := dict
     "transpiler" (default "dartsass" $params.hb.sass_transpiler)
+    "silenceDeprecations" (
+      cond
+      $debug
+      slice
+      (default slice $params.hb.sass_silence_deprecations)
+    )
     "targetPath" (printf "css/%s%s.css" $bundle $suffix)
     "enableSourceMap" hugo.IsProduction
     "vars" site.Params.hb.styles
@@ -29,7 +36,7 @@
   {{- $tmpl := resources.Get "hb/scss/index.tmpl.scss" }}
   {{/* Compile SCSS. The target path MUST begin with "hb/scss/*" for resolving SASS/SCSS modules. */}}
   {{- $style := $tmpl | resources.ExecuteAsTemplate (printf "hb/scss/index%s.scss" $suffix) $context }}
-  {{- if partialCached "hb/functions/debug" . }}
+  {{- if $debug }}
     {{- warnf "[hb] %s:\n%s\n" $style.Name $style.Content }}
   {{- end }}
   {{- $style = $style | toCSS $options }}
