@@ -1,3 +1,4 @@
+let purgeCSSPlugin = requireX('@fullhuman/postcss-purgecss')
 const stats = './hugo_stats.json'
 const path = require('path')
 const fs = require('fs')
@@ -35,7 +36,11 @@ try {
     throw new Error(`Failed to parse runtime PurgeCSS config.\nPlease enable the "--renderToDisk" if you are using Hugo server.\n${err}`)
 }
 
-const purgecss = requireX('@fullhuman/postcss-purgecss')({
+if (typeof purgeCSSPlugin !== 'function') {
+    // Compatible with v7.0.0.
+    purgeCSSPlugin = purgeCSSPlugin.purgeCSSPlugin
+}
+const purgecss = purgeCSSPlugin({
     content: [stats],
     defaultExtractor: (content) => {
         let els = JSON.parse(content).htmlElements
