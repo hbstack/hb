@@ -1,6 +1,6 @@
 {{- $page := . }}
 {{/* JS compile options. */}}
-{{- $params := .Site.Params.hb }}
+{{- $params := site.Params.hb }}
 {{- $bundle := default "hb"  $params.js_bundle_name }}
 {{- $targetPath := printf "js/%s.js" $bundle }}
 {{- $options := dict
