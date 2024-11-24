@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.16.0](https://github.com/hbstack/hb/compare/v0.15.4...v0.16.0) (2024-11-24)
+
+
+### Features ✨
+
+* add the `hb.sass_silence_deprecations` parameter to silence deprecations from Dart Sass ([#280](https://github.com/hbstack/hb/issues/280)) ([02d49a0](https://github.com/hbstack/hb/commit/02d49a04b0c9ec8817e2bcacba0ab1741064c626))
+
+
+### Bug Fixes 🐞
+
+* empty `params` passed to js.Build ([#282](https://github.com/hbstack/hb/issues/282)) ([7243fd9](https://github.com/hbstack/hb/commit/7243fd91cfdeff9e9a90f1c0d294cd65c1d67d0b)), closes [#275](https://github.com/hbstack/hb/issues/275)
+
 ## [0.15.4](https://github.com/hbstack/hb/compare/v0.15.3...v0.15.4) (2024-11-24)
 
 
