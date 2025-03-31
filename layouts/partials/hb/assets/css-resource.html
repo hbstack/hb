@@ -28,7 +28,6 @@
     "enableSourceMap" hugo.IsProduction
     "vars" site.Params.hb.styles
   }}
-  {{ warnf "sass opts: %#v" $options }}
   {{- if hugo.IsProduction }}
     {{- $options = merge $options (dict
       "outputStyle" "compressed")
