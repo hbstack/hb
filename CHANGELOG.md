@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.16.1](https://github.com/hbstack/hb/compare/v0.16.0...v0.16.1) (2025-03-31)
+
+
+### Bug Fixes 🐞
+
+* **deps:** update dependency stylelint-scss to v6.10.1 ([972e1fd](https://github.com/hbstack/hb/commit/972e1fdc1c970804f774255445bbc7a2ee5f970a))
+* **deps:** update dependency stylelint-scss to v6.11.0 ([b8872f0](https://github.com/hbstack/hb/commit/b8872f0e6a7c8a6c56938d949567fbff35d1f8d0))
+* **deps:** update dependency stylelint-scss to v6.11.1 ([114a9cc](https://github.com/hbstack/hb/commit/114a9ccc063ffe2dc1d4183f084fb1532760bfdf))
+* remove the hb.sass_silence_deprecations parameter ([0dc9e4d](https://github.com/hbstack/hb/commit/0dc9e4d30fcd63a127556bcc83279e9c1a629274))
+* silence Dart Sass deprecations ([#336](https://github.com/hbstack/hb/issues/336)) ([0dc9e4d](https://github.com/hbstack/hb/commit/0dc9e4d30fcd63a127556bcc83279e9c1a629274))
+
 ## [0.16.0](https://github.com/hbstack/hb/compare/v0.15.4...v0.16.0) (2024-11-24)
 
 
