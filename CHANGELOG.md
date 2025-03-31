@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.2](https://github.com/hbstack/hb/compare/v0.16.1...v0.16.2) (2025-03-31)
+
+
+### Bug Fixes 🐞
+
+* remove debug codes ([00d6dc9](https://github.com/hbstack/hb/commit/00d6dc998f852bf4c2a7f21280eeee2d7342cc60))
+
 ## [0.16.1](https://github.com/hbstack/hb/compare/v0.16.0...v0.16.1) (2025-03-31)
 
 
